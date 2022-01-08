@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br>
+      <h1 class="header center orange-text">House price prediction</h1>
+      <div class="row center">
+        <h3>Made by <a class="orange-text text-lighten-3" href="">Nikit kashyap</a></h3>
+        <h5 class="header col s12 light">Predicts the house price based on the following attributes
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="CRIM"><b>CRIM</b></label>
+            <br>
+          <input placeholder="per capita crime rate by town" name="CRIM" id="CRIM" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="ZN"><b>ZN</b></label>
+            <br>
+          <input id="ZN" name="ZN" placeholder="proportion of residential land zoned for lots over 25,000 sq.ft."  type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>INDUS</b></label>
+            <br>
+          <input id="_name" name="INDUS" placeholder="proportion of non-retail business acres per town" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>CHAS</b></label>
+            <br>
+          <input id="_name" name="CHAS" placeholder="Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>NOX</b></label>
+            <br>
+          <input id="_name" name="NOX" placeholder="nitric oxides concentration (parts per 10 million)" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>RM</b></label>
+            <br>
+          <input id="_name" name="RM" placeholder="average number of rooms per dwelling" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>AGE</b></label>
+            <br>
+          <input id="_name" name="proportion of owner-occupied units built prior to 1940" placeholder="proportion of owner-occupied units built prior to 1940" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>DIS</b></label>
+            <br>
+          <input id="_name" name="DIS" placeholder="weighted distances to five Boston employment centres" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>RAD</b></label>
+            <br>
+          <input id="_name" name="RAD" placeholder="index of accessibility to radial highways" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>TAX</b></label>
+            <br>
+          <input id="_name" name="TAX" placeholder="full-value property-tax rate per $10,000" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>HPTRATIO</b></label>
+            <br>
+          <input id="_name" name="PTRATIO" placeholder="pupil-teacher ratio by town" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>B</b></label>
+            <br>
+          <input id="_name" name="B" placeholder="1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b>LSTAT</b></label>
+            <br>
+          <input id="_name" name="LSTAT" placeholder="% lower status of the population" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict house price</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+    <br><br>
+  </div>
+  </div>
+<footer style="background-color: rgb(255, 166, 0);">
+    <div class="footer-copyright" >
+      <div class="container" style="font-weight: bolder;">
+        <br>
+      <div style="text-align:center;font-weight: bolder;font-style: normal;" >Copyright 2021-2022 by Nikit kashyap. All Rights Reserved.</div>
+      <br>
+      </div>
+    </div>
+  </footer>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
